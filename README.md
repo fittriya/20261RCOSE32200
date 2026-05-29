@@ -9,11 +9,11 @@ This project helps users to understand how different implementation of RAID leve
 - RAID 4
 - RAID 5
 
-  ### Tools Used
-  - HTML
-  - CSS
-  - JavaScript
+## Tools Used
+- HTML
+- CSS
+- JavaScript
  
-  ### Main Purpose
-  To help users to understand how RAID implementation works.
+## Main Purpose
+To help users to understand how RAID implementation works.
 
