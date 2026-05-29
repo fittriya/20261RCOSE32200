@@ -2,14 +2,96 @@
 <html>
 <head>
     <title>RAID Mapping Simulator</title>
-    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            margin: 0;
+            background-color: #111;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            font-family: Consolas, Monaco, monospace;
+            font-size: 64px;
+            font-weight: bold;
+            margin: 50px 0;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 900px;
+            margin: auto;
+            background-color: #1b1b1b;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 0 25px rgba(164, 0, 32, 0.25);
+        }
+
+        label {
+            display: block;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        input,
+        select {
+            width: 100%;
+            height: 70px;
+            padding: 0 20px;
+            margin-bottom: 25px;
+            font-size: 24px;
+            color: white;
+            background-color: #252525;
+            border: 1px solid #a40020;
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            height: 75px;
+            margin-top: 5px;
+            background-color: #a40020;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #c0002b;
+        }
+
+        h2 {
+            color: #a40020;
+            font-size: 36px;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+
+        #result {
+            min-height: 50px;
+            padding: 20px;
+            border-left: 4px solid #a40020;
+            background-color: #252525;
+            border-radius: 0 10px 10px 0;
+            font-size: 24px;
+        }
+    </style>
 </head>
+
 <body>
 
     <h1>RAID Mapping Simulator</h1>
 
     <div class="container">
-        <label>RAID Level</label>
+
+        <label for="raidLevel">RAID Level</label>
         <select id="raidLevel">
             <option value="0">RAID 0</option>
             <option value="1">RAID 1</option>
@@ -17,16 +99,17 @@
             <option value="5">RAID 5</option>
         </select>
 
-        <label>Number of Disks</label>
+        <label for="numDisks">Number of Disks</label>
         <input type="number" id="numDisks" value="4">
 
-        <label>Block Number</label>
+        <label for="blockNumber">Block Number</label>
         <input type="number" id="blockNumber">
 
         <button onclick="calculateRaid()">Calculate</button>
 
         <h2>Result</h2>
-        <p id="result">Enter values and click Calculate.</p>
+        <div id="result"></div>
+
     </div>
 
     <script src="script.js"></script>
